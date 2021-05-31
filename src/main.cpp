@@ -39,7 +39,7 @@ int main(int argc, char** argv) {
     short chiki = 0;
     char leChecksum[2];
 
-    for (int i = 1; i < trame[1] + 2; i++) {
+    for (int i = 0; i < trame[1] + 2; i++) {
         chiki = chiki^trame[i];
     }
     sprintf(leChecksum, "%2X", chiki);
