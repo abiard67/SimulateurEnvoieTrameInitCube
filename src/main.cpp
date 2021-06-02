@@ -3,7 +3,7 @@
 #include <iostream>
 #include <iomanip>
 #include <sstream>
-
+#include <unistd.h>
 #include <stdio.h>
 #include <string>
 #include <chrono>
@@ -16,14 +16,15 @@
 using namespace std;
 
 int main(int argc, char** argv) {
+char tableau [100];
+vector<char> trame(0);
+//int usleep(useconds_t usec);
+    for (int i = 0; i < 7; i++){
 
-
-    char tableau [100];
-    vector<char> trame(0);
     //char PF;
     //char pf;
 
-
+    usleep(100000);
 
     //char trame2[128] = {'~','1',21,'S','T','A','T','U','S','-','B','O','R','D',' ','-','I','N','S','T'};
     trame.push_back(1);//1
@@ -71,8 +72,9 @@ int main(int argc, char** argv) {
     cout << endl;
     cout << "Valeur de Retour de l'écriture :" << endl;
     cout << test2 << endl;
-
-	while (true) {
+}
+}
+/*	while (true) {
 		int typeRetourEcoute = monObjUSB->ReadString(tableau, 255, 128, 0);
 		if (typeRetourEcoute == 0) {
             cout << "Pas de commande." << endl;
@@ -90,4 +92,4 @@ int main(int argc, char** argv) {
 	}
 
     return 0;
-}
+}*/
